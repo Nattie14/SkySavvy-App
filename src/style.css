@@ -80,17 +80,18 @@ color: rgb(159, 13, 120);
   display: flex;
 }
 .weather-app-temperature{
-font-size: 80px;
+font-size: 90px;
 font-weight: bold;
-margin-left: 10px;
+line-height: 90px;
 }
 
 .weather-app-icon{
-  font-size: 46px;
-  margin-top: 22px;
+width: 90px;
+height: 88px;
+
 }
 .weather-app-unit{
-  margin-top: 16px;
+  margin-top: 10px;
   font-size: 28px;
 }
 footer{
