@@ -11,7 +11,7 @@ function refreshWeather(response) {
    
   
     temperatureElement.innerHTML = Math.round(temperature);
-    descriptionElement.innerHTML = capitalizeFirstLetter(response.data.condition.description);
+    descriptionElement.innerHTML = capitalizeEveryWord(response.data.condition.description);
     cityElement.innerHTML = response.data.city;
     humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
@@ -21,8 +21,8 @@ function refreshWeather(response) {
     />`
 }
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalizeEveryWord(string) {
+    return string.replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
 function formatDate(date) {
